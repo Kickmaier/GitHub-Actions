@@ -1,0 +1,46 @@
+name: Manual .NET Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔔 Start build process
+        run: echo "Build process has started..."
+
+      - &echo-template
+        name: Echo template
+        run: echo "This is a reusable echo step."
+        shell: bash
+
+      - name: Show runtime context
+        run: |
+          echo "Runner OS: ${{ runner.os }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Workflow: ${{ github.workflow }}"
+          echo "Triggered by: ${{ github.event_name }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Run number: ${{ github.run_number }}"
+          echo "Branch: ${{ github.ref }}"
+
+      - *echo-template
+
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Install .NET 10
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build project
+        run: dotnet build GitHubActions/CleanCodeDevOps/CleanCodeDevOps.slnx
+
+      - name: Run code
+        run: dotnet run --project GitHubActions/CleanCodeDevOps/CleanCodeDevOps.App.csproj
