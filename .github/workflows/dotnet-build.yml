@@ -43,4 +43,4 @@ jobs:
         run: dotnet build CleanCodeDevOps/CleanCodeDevOps.slnx
 
       - name: Run code
-        run: dotnet run --project CleanCodeDevOps/CleanCodeDevOps.App.csproj
+        run: dotnet run --project CleanCodeDevOps.App/CleanCodeDevOps.App.csproj
