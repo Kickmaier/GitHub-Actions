@@ -1,5 +1,5 @@
 <Solution>
   <Project Path="CleanCodeDevOps.App/CleanCodeDevOps.App.csproj" />
-  <Project Path="IceCreamMachine.Test/IceCreamMachine.Test.csproj" Id="296704f2-0dbc-409d-92f8-6bd15b7a9fbd" />
-  <Project Path="IceCreamMashine/IceCreamMachine.csproj" Id="355eecf2-4260-47cc-a47b-ff7771aa6f28" />
+  <Project Path="IceCreamMachine.Test/IceCreamMachine.Test.csproj" />
+  <Project Path="IceCreamMachine/IceCreamMachine.csproj" />
 </Solution>

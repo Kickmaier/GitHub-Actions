@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IceCreamMashine\IceCreamMachine.csproj" />
+    <ProjectReference Include="..\IceCreamMachine\IceCreamMachine.csproj" />
   </ItemGroup>
 
   <ItemGroup>
