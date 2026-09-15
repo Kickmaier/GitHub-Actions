@@ -4,7 +4,12 @@ on: workflow_dispatch
 
 jobs:
   print-some-stuff:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: Step 1
         run : echo "Hello world, from our workflow"
+
+      - name: Print som context
+        run: |
+          echo "Repository: ${{ github.action }}
+          
