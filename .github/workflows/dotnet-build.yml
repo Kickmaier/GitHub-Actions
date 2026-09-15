@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - main
-      path-ignore: '.github/'
+    paths-ignore: '.github/'
 
 jobs:
   build:
